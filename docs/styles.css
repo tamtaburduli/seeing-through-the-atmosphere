@@ -13,20 +13,26 @@
    ========================================================= */
 
 :root {
-  --bg: #070b12;
-  --bg-alt: #0c1220;
-  --surface: #10192c;
-  --surface-2: #141f38;
+  --bg: #050914;
+  --bg-alt: #091426;
+  --surface: #0d1b30;
+  --surface-2: #122640;
+
   --line: rgba(255,255,255,0.09);
-  --text: #eef2f8;
-  --text-dim: #93a1b8;
-  --text-faint: #5c6a82;
-  --accent: #ef5b4a;
-  --accent-soft: rgba(239,91,74,0.15);
-  --accent2: #4fb8e6;
-  --accent2-soft: rgba(79,184,230,0.14);
+
+  --text: #eef6ff;
+  --text-dim: #9db1c9;
+  --text-faint: #667c96;
+
+  --accent: #4fb8e6;
+  --accent-soft: rgba(79,184,230,0.16);
+
+  --accent2: #7f8cff;
+  --accent2-soft: rgba(127,140,255,0.14);
+
   --radius: 10px;
   --max: 980px;
+
   --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'IBM Plex Sans', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
