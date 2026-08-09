@@ -436,120 +436,597 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   outline-offset: 2px;
 }
 /* =========================================================
-   SCIENTIFIC SIGNAL PATHWAY
+   SUN → EARTH → ATMOSPHERE → SENSOR DIAGRAM
 ========================================================= */
 
-.signal-path {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr;
-  align-items: stretch;
-  gap: 1.25rem;
+.remote-sensing-diagram {
+  position: relative;
 
+  min-height: 430px;
   margin: 3rem 0;
-  padding: 2rem;
+  padding: 2.5rem 2rem 4.5rem;
 
-  border: 1px solid rgba(95, 180, 240, 0.20);
-  border-radius: 14px;
+  overflow: hidden;
+
+  border: 1px solid rgba(110, 190, 255, 0.18);
+  border-radius: 16px;
 
   background:
+    radial-gradient(
+      circle at 50% 65%,
+      rgba(50, 120, 200, 0.10),
+      transparent 32%
+    ),
     linear-gradient(
-      135deg,
-      rgba(30, 70, 120, 0.15),
-      rgba(8, 15, 30, 0.65)
+      180deg,
+      rgba(7, 18, 35, 0.95),
+      rgba(5, 11, 24, 0.98)
     );
 }
 
 
-.signal-step {
+/* ---------------------------------------------------------
+   SUN
+--------------------------------------------------------- */
+
+.rs-sun-group {
+  position: absolute;
+  left: 7%;
+  top: 14%;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
-  min-height: 160px;
-  padding: 1.5rem;
-
-  border: 1px solid rgba(95, 180, 240, 0.18);
-  border-radius: 10px;
-
-  background: rgba(13, 27, 48, 0.72);
+  align-items: center;
+  gap: 0.7rem;
 }
 
 
-.step-number {
-  margin-bottom: 1rem;
+.rs-sun {
+  width: 72px;
+  height: 72px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 35%,
+      #fff9d6 0%,
+      #ffd46b 28%,
+      #f8a83e 58%,
+      #dd6d2d 100%
+    );
+
+  box-shadow:
+    0 0 18px rgba(255, 200, 95, 0.55),
+    0 0 45px rgba(255, 170, 70, 0.20);
+}
+
+
+/* ---------------------------------------------------------
+   EARTH SYSTEM
+--------------------------------------------------------- */
+
+.rs-earth-system {
+  position: absolute;
+
+  left: 50%;
+  top: 53%;
+
+  width: 220px;
+  height: 220px;
+
+  transform: translate(-50%, -50%);
+}
+
+
+.rs-earth {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 145px;
+  height: 145px;
+
+  transform: translate(-50%, -50%);
+
+  overflow: hidden;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #5bb7e8 0%,
+      #267cba 42%,
+      #0c3f73 78%,
+      #071f3c 100%
+    );
+
+  box-shadow:
+    inset -20px -18px 35px rgba(0, 0, 0, 0.30),
+    0 0 30px rgba(79, 184, 230, 0.14);
+}
+
+
+/* Simplified continents */
+
+.rs-land {
+  position: absolute;
+
+  background: rgba(95, 170, 120, 0.92);
+
+  filter: saturate(0.8);
+}
+
+
+.land-one {
+  width: 48px;
+  height: 28px;
+
+  left: 24px;
+  top: 28px;
+
+  border-radius:
+    55% 45% 60% 40% /
+    45% 60% 40% 55%;
+
+  transform: rotate(-14deg);
+}
+
+
+.land-two {
+  width: 35px;
+  height: 54px;
+
+  left: 76px;
+  top: 66px;
+
+  border-radius:
+    45% 55% 38% 62% /
+    55% 40% 60% 45%;
+
+  transform: rotate(18deg);
+}
+
+
+.land-three {
+  width: 24px;
+  height: 18px;
+
+  left: 34px;
+  top: 94px;
+
+  border-radius: 50%;
+
+  transform: rotate(20deg);
+}
+
+
+/* ---------------------------------------------------------
+   ATMOSPHERIC SHELL
+--------------------------------------------------------- */
+
+.rs-atmosphere-shell {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+}
+
+
+.shell-inner {
+  width: 166px;
+  height: 166px;
+
+  border: 2px solid rgba(110, 205, 255, 0.42);
+
+  box-shadow:
+    0 0 15px rgba(79, 184, 230, 0.20);
+}
+
+
+.shell-outer {
+  width: 190px;
+  height: 190px;
+
+  border: 1px solid rgba(105, 190, 255, 0.20);
+
+  box-shadow:
+    0 0 30px rgba(79, 184, 230, 0.10);
+}
+
+
+.rs-atmosphere-label {
+  position: absolute;
+
+  left: 50%;
+  top: -10px;
+
+  transform: translateX(-50%);
 
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 
   color: var(--accent);
 }
 
 
-.step-label {
-  margin-bottom: 0.65rem;
+.rs-earth-label {
+  position: absolute;
+
+  left: 50%;
+  bottom: 19px;
+
+  transform: translateX(-50%);
 
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 0.9rem;
   font-weight: 600;
 
   color: var(--text);
 }
 
 
-.step-detail {
-  font-size: 0.9rem;
-  line-height: 1.65;
+/* ---------------------------------------------------------
+   LIGHT BEAMS
+--------------------------------------------------------- */
 
-  color: var(--text-dim);
+.rs-beam {
+  position: absolute;
+
+  height: 2px;
+
+  transform-origin: left center;
+
+  border-radius: 10px;
 }
 
 
-.signal-arrow {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.rs-beam::after {
+  content: "";
 
-  min-width: 115px;
+  position: absolute;
 
-  text-align: center;
-  color: var(--accent);
+  right: -4px;
+  top: 50%;
+
+  width: 8px;
+  height: 8px;
+
+  transform:
+    translateY(-50%)
+    rotate(45deg);
+
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
 }
 
 
-.signal-arrow span {
-  font-size: 2rem;
-  line-height: 1;
+.rs-beam-incoming {
+  left: 17%;
+  top: 29%;
+
+  width: 30%;
+
+  transform: rotate(22deg);
+
+  color: rgba(255, 222, 135, 0.95);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 225, 145, 0.95),
+      rgba(255, 225, 145, 0.18)
+    );
+
+  box-shadow:
+    0 0 8px rgba(255, 210, 110, 0.22);
 }
 
 
-.signal-arrow small {
-  max-width: 120px;
-  margin-top: 0.75rem;
+.rs-beam-reflected {
+  left: 59%;
+  top: 48%;
+
+  width: 25%;
+
+  transform: rotate(-24deg);
+
+  color: rgba(120, 205, 255, 0.95);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(95, 190, 245, 0.85),
+      rgba(120, 205, 255, 0.22)
+    );
+
+  box-shadow:
+    0 0 8px rgba(79, 184, 230, 0.25);
+}
+
+
+.rs-beam-label {
+  position: absolute;
+
+  left: 50%;
+  top: -28px;
+
+  transform: translateX(-50%);
+
+  white-space: nowrap;
 
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  line-height: 1.5;
+  font-size: 0.66rem;
 
   color: var(--text-faint);
 }
 
 
-@media (max-width: 900px) {
+/* ---------------------------------------------------------
+   PROCESS LABELS
+--------------------------------------------------------- */
 
-  .signal-path {
-    grid-template-columns: 1fr;
+.rs-process-label {
+  position: absolute;
+
+  padding: 0.3rem 0.55rem;
+
+  border: 1px solid rgba(110, 190, 255, 0.15);
+  border-radius: 999px;
+
+  background: rgba(8, 18, 34, 0.88);
+
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+
+  color: var(--text-dim);
+}
+
+
+.rs-process-down {
+  left: -84px;
+  top: 50px;
+}
+
+
+.rs-process-surface {
+  left: 50%;
+
+  bottom: -30px;
+
+  transform: translateX(-50%);
+}
+
+
+/* ---------------------------------------------------------
+   SATELLITE
+--------------------------------------------------------- */
+
+.rs-satellite-group {
+  position: absolute;
+
+  right: 7%;
+  top: 11%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+
+.rs-satellite {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  transform: rotate(-8deg);
+}
+
+
+.sat-body {
+  position: relative;
+
+  width: 42px;
+  height: 31px;
+
+  border: 1px solid rgba(170, 220, 255, 0.65);
+  border-radius: 6px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d4e4ef,
+      #71899d 65%,
+      #3f566b
+    );
+}
+
+
+.sat-lens {
+  position: absolute;
+
+  left: 50%;
+  bottom: -9px;
+
+  width: 15px;
+  height: 11px;
+
+  transform: translateX(-50%);
+
+  border-radius: 2px 2px 6px 6px;
+
+  background: #4fb8e6;
+
+  box-shadow:
+    0 0 8px rgba(79, 184, 230, 0.40);
+}
+
+
+.sat-panel {
+  width: 48px;
+  height: 24px;
+
+  border: 1px solid rgba(100, 165, 220, 0.35);
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(58, 118, 175, 0.95) 0,
+      rgba(58, 118, 175, 0.95) 10px,
+      rgba(25, 65, 105, 0.95) 11px,
+      rgba(25, 65, 105, 0.95) 13px
+    );
+}
+
+
+.rs-object-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+
+  color: var(--text-dim);
+}
+
+
+/* ---------------------------------------------------------
+   FINAL MESSAGE
+--------------------------------------------------------- */
+
+.rs-measured-label {
+  position: absolute;
+
+  left: 50%;
+  bottom: 22px;
+
+  width: min(600px, 85%);
+
+  transform: translateX(-50%);
+
+  text-align: center;
+
+  font-size: 0.86rem;
+  line-height: 1.6;
+
+  color: var(--text-dim);
+}
+
+
+.rs-measured-label strong {
+  color: var(--text);
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 760px) {
+
+  .remote-sensing-diagram {
+    min-height: 570px;
   }
 
 
-  .signal-arrow {
-    min-height: 65px;
+  .rs-sun-group {
+    left: 8%;
+    top: 9%;
   }
 
 
-  .signal-arrow span {
-    transform: rotate(90deg);
+  .rs-sun {
+    width: 55px;
+    height: 55px;
+  }
+
+
+  .rs-satellite-group {
+    right: 5%;
+    top: 9%;
+  }
+
+
+  .sat-panel {
+    width: 33px;
+    height: 19px;
+  }
+
+
+  .sat-body {
+    width: 34px;
+    height: 26px;
+  }
+
+
+  .rs-earth-system {
+    top: 58%;
+
+    width: 200px;
+    height: 200px;
+  }
+
+
+  .rs-earth {
+    width: 125px;
+    height: 125px;
+  }
+
+
+  .shell-inner {
+    width: 146px;
+    height: 146px;
+  }
+
+
+  .shell-outer {
+    width: 170px;
+    height: 170px;
+  }
+
+
+  .rs-beam-incoming {
+    left: 19%;
+    top: 27%;
+
+    width: 34%;
+
+    transform: rotate(49deg);
+  }
+
+
+  .rs-beam-reflected {
+    left: 57%;
+    top: 46%;
+
+    width: 31%;
+
+    transform: rotate(-47deg);
+  }
+
+
+  .rs-beam-label {
+    display: none;
+  }
+
+
+  .rs-process-label {
+    font-size: 0.57rem;
+  }
+
+
+  .rs-process-down {
+    left: -48px;
+    top: 35px;
   }
 
 }
