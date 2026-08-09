@@ -442,26 +442,25 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 }
 
 /* =========================================================
-   REMOTE SENSING DIAGRAM IMAGE
+   REMOTE SENSING DIAGRAM IMAGE — CONTROLLED SIZE
    ========================================================= */
 
 .remote-sensing-image-wrap {
   width: 100%;
-  max-width: 1200px;
   margin: 3rem auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 .remote-sensing-image {
-  width: 100%;
-  max-width: 1000px;
+  width: 750px;
+  max-width: 90vw;
   height: auto;
   display: block;
-  border-radius: 18px;
-  object-fit: contain;
+  border-radius: 16px;
 }
 
 
