@@ -129,7 +129,7 @@ a { color: var(--accent2); }
   opacity: 0.5;
 }
 .band-1 { top: -10%; background: radial-gradient(ellipse at 30% 30%, var(--accent2-soft), transparent 70%); }
-..band-2 {
+.band-2 {
   top: 30%;
   background: radial-gradient(
     ellipse at 70% 50%,
@@ -139,7 +139,7 @@ a { color: var(--accent2); }
   animation: drift 9s ease-in-out infinite;
 }
 .band-3 { bottom: -15%; background: radial-gradient(ellipse at 40% 70%, rgba(79,184,230,0.08), transparent 70%); }
-..hero-glow {
+.hero-glow {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -152,6 +152,18 @@ a { color: var(--accent2); }
     transparent 65%
   );
   animation: glowPulse 6s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.42;
+  }
+
+  50% {
+    transform: translate3d(-3%, 2%, 0) scale(1.06);
+    opacity: 0.62;
+  }
 }
 
 @keyframes glowPulse {
