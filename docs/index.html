@@ -1,230 +1,969 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seeing Through the Atmosphere</title>
-<meta name="description" content="How physics, spectral optimization, and physics-informed AI help us interpret remote-sensing measurements.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Seeing Through the Atmosphere</title>
+
+  <meta
+    name="description"
+    content="Explore how the atmosphere reshapes light—and how physics, spectral measurements, and computation help us recover information from remote-sensing data."
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
 </head>
+
+
 <body>
 
-<!-- ============ NAV ============ -->
-<nav class="site-nav" id="siteNav">
-  <a href="#hero" class="nav-brand">STA</a>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-    <span></span><span></span><span></span>
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav
+  class="site-nav"
+  id="siteNav"
+>
+
+  <a
+    href="#hero"
+    class="nav-brand"
+  >
+    STA
+  </a>
+
+  <button
+    class="nav-toggle"
+    id="navToggle"
+    aria-label="Toggle navigation"
+    aria-expanded="false"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
   </button>
-  <div class="nav-links" id="navLinks">
-    <a href="#atmosphere">Atmosphere</a>
-    <a href="#wavelengths">Wavelengths</a>
-    <a href="#choose">Try It</a>
-    <a href="#optimize">Optimize</a>
-    <a href="#noise">Noise</a>
-    <a href="#pnnl">PNNL</a>
-    <a href="#careers">Careers</a>
-    <a href="#about">About</a>
+
+  <div
+    class="nav-links"
+    id="navLinks"
+  >
+
+    <a href="#atmosphere">
+      Atmosphere
+    </a>
+
+    <a href="#wavelengths">
+      Wavelengths
+    </a>
+
+    <a href="#choose">
+      Try It
+    </a>
+
+    <a href="#optimize">
+      Optimize
+    </a>
+
+    <a href="#noise">
+      Noise
+    </a>
+
+    <a href="#pnnl">
+      PNNL
+    </a>
+
+    <a href="#careers">
+      Careers
+    </a>
+
+    <a href="#about">
+      About
+    </a>
+
   </div>
+
 </nav>
 
-<!-- ============ SECTION 1 — HERO ============ -->
-<header class="hero" id="hero">
-  <div class="hero-atmosphere" aria-hidden="true">
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<header
+  class="hero"
+  id="hero"
+>
+
+  <div
+    class="hero-atmosphere"
+    aria-hidden="true"
+  >
+
     <div class="hero-band band-1"></div>
     <div class="hero-band band-2"></div>
     <div class="hero-band band-3"></div>
     <div class="hero-glow"></div>
+
   </div>
+
+
   <div class="hero-content">
-    <p class="eyebrow">A public science communication project</p>
-    <h1>Seeing Through<br>the Atmosphere</h1>
-    <p class="hero-subtitle">How physics, spectral optimization, and physics-informed AI help us interpret remote-sensing measurements</p>
-    <p class="hero-question">What can light tell us about what happened to it before it reached a sensor?</p>
-    <a href="#atmosphere" class="scroll-cue" aria-label="Scroll to next section">
-      <span>Not quite. Here's why.</span>
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 7L10 13L16 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+    <p class="eyebrow">
+      A public science communication project
+    </p>
+
+    <h1>
+      Seeing Through<br>
+      the Atmosphere
+    </h1>
+
+    <p class="hero-subtitle">
+      How the atmosphere reshapes light—and how physics,
+      spectral measurements, and computation help us recover
+      the information hidden inside.
+    </p>
+
+    <p class="hero-question">
+      What can light tell us about what happened to it
+      before it reached a sensor?
+    </p>
+
+    <a
+      href="#atmosphere"
+      class="scroll-cue"
+      aria-label="Scroll to the atmosphere section"
+    >
+
+      <span>
+        Trace the signal.
+      </span>
+
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+      >
+        <path
+          d="M4 7L10 13L16 7"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+
     </a>
+
   </div>
+
 </header>
+
+
 
 <main>
 
-<!-- ============ SECTION 2 — WHAT HAPPENS TO LIGHT ============ -->
-<section class="section" id="atmosphere">
-  <div class="section-inner">
-    <p class="eyebrow">Section 1</p>
-    <h2>What happens to light in the atmosphere?</h2>
-    <p class="lede">A remote-sensing instrument does not observe Earth's surface in isolation. Before light reaches a sensor, it has interacted with the atmosphere—and those interactions change what the instrument measures.</p>
 
-    <div class="light-path" role="img" aria-label="Diagram: sunlight travels from the sun, through the atmosphere where it is absorbed and scattered, reflects off the Earth's surface, passes through the atmosphere again, and is recorded by a satellite sensor.">
-      <div class="path-node">
-        <div class="path-icon sun-icon"></div>
-        <span>Sun</span>
+
+<!-- =========================================================
+     SECTION 1 — WHAT HAPPENS TO LIGHT?
+========================================================= -->
+
+<section
+  class="section"
+  id="atmosphere"
+>
+
+  <div class="section-inner">
+
+    <p class="eyebrow">
+      Section 1
+    </p>
+
+    <h2>
+      What happens to light in the atmosphere?
+    </h2>
+
+    <p class="lede">
+      A remote-sensing instrument does not observe Earth's
+      surface in isolation. Before light reaches a sensor,
+      it has interacted with the atmosphere—and those
+      interactions change what the instrument measures.
+    </p>
+
+
+
+    <!-- Scientific signal pathway -->
+
+    <div
+      class="signal-path"
+      role="img"
+      aria-label="Incoming sunlight passes through the atmosphere, interacts with Earth's surface, travels upward through the atmosphere again, and is finally measured by a remote sensor."
+    >
+
+
+      <div class="signal-step">
+
+        <span class="step-number">
+          01
+        </span>
+
+        <span class="step-label">
+          Incoming sunlight
+        </span>
+
+        <span class="step-detail">
+          Solar radiation enters Earth's atmosphere.
+        </span>
+
       </div>
-      <div class="path-arrow">
-        <span class="path-label">incoming radiation</span>
+
+
+
+      <div
+        class="signal-arrow"
+        aria-hidden="true"
+      >
+
+        <span>
+          →
+        </span>
+
+        <small>
+          absorption + scattering
+        </small>
+
       </div>
-      <div class="path-node">
-        <div class="path-icon atm-icon"></div>
-        <span>Atmosphere</span>
-        <small>absorption + scattering</small>
+
+
+
+      <div class="signal-step">
+
+        <span class="step-number">
+          02
+        </span>
+
+        <span class="step-label">
+          Earth's surface
+        </span>
+
+        <span class="step-detail">
+          Some wavelengths are absorbed while others are
+          reflected.
+        </span>
+
       </div>
-      <div class="path-arrow"></div>
-      <div class="path-node">
-        <div class="path-icon earth-icon"></div>
-        <span>Earth surface</span>
-        <small>reflection</small>
+
+
+
+      <div
+        class="signal-arrow"
+        aria-hidden="true"
+      >
+
+        <span>
+          →
+        </span>
+
+        <small>
+          second atmospheric path
+        </small>
+
       </div>
-      <div class="path-arrow"></div>
-      <div class="path-node">
-        <div class="path-icon atm-icon"></div>
-        <span>Atmosphere</span>
-        <small>again</small>
+
+
+
+      <div class="signal-step">
+
+        <span class="step-number">
+          03
+        </span>
+
+        <span class="step-label">
+          Remote sensor
+        </span>
+
+        <span class="step-detail">
+          The instrument records the resulting spectrum.
+        </span>
+
       </div>
-      <div class="path-arrow"></div>
-      <div class="path-node">
-        <div class="path-icon sensor-icon"></div>
-        <span>Satellite sensor</span>
-      </div>
+
+
     </div>
+
+
 
     <div class="text-columns">
-      <p>In reflected-solar remote sensing, sunlight first travels downward through Earth's atmosphere. Along the way, gases and particles can absorb light at particular wavelengths or scatter it in different directions.
 
-The remaining light reaches Earth's surface, where some wavelengths are absorbed and others are reflected. That reflected light then travels upward through the atmosphere before reaching a satellite or airborne sensor.
 
-The spectrum measured by the sensor therefore contains information about both the surface and the atmosphere between the surface and the instrument.</p>
-      <p>The atmosphere doesn't just block light—it leaves information in it.</p>
+      <p>
+        In reflected-solar remote sensing, sunlight first
+        travels downward through Earth's atmosphere. Along
+        the way, gases and particles can
+        <strong>absorb</strong>
+        light at particular wavelengths or
+        <strong>scatter</strong>
+        it in different directions.
+
+        The remaining light reaches Earth's surface, where
+        some wavelengths are absorbed and others are
+        reflected. That reflected light then travels upward
+        through the atmosphere before reaching a satellite
+        or airborne sensor.
+      </p>
+
+
+      <p>
+        The spectrum measured by the sensor therefore
+        contains information about both the
+        <strong>surface</strong>
+        and the
+        <strong>atmosphere</strong>
+        between the surface and the instrument.
+
+        <br><br>
+
+        <strong>
+          The atmosphere doesn't just block light—it leaves
+          information in it.
+        </strong>
+      </p>
+
+
     </div>
+
+
 
     <details class="tech-note">
-      <summary>Technical note: absorption vs. scattering</summary>
-      <p><strong>Absorption</strong> occurs when atmospheric molecules interact with radiation at characteristic wavelengths. Gases such as O₂, H₂O, and CO₂ therefore produce recognizable features in measured spectra. <strong>Scattering</strong> changes the direction in which radiation travels. The amount and wavelength dependence of scattering depend on the molecules or particles involved, which means scattering can also change the signal measured by a remote sensor.</p>
+
+      <summary>
+        Technical note: absorption vs. scattering
+      </summary>
+
+      <p>
+        <strong>Absorption</strong>
+        occurs when atmospheric molecules interact with
+        radiation at characteristic wavelengths. Gases such
+        as O₂, H₂O, and CO₂ therefore produce recognizable
+        features in measured spectra.
+      </p>
+
+      <p>
+        <strong>Scattering</strong>
+        changes the direction in which radiation travels.
+        Its strength and wavelength dependence depend on the
+        molecules or particles involved, so scattering can
+        also alter the signal measured by a remote sensor.
+      </p>
+
     </details>
+
+
   </div>
+
 </section>
 
-<!-- ============ SECTION 3 — WHY WAVELENGTHS MATTER ============ -->
-<section class="section section-alt" id="wavelengths">
-  <div class="section-inner">
-    <p class="eyebrow">Section 2</p>
-    <h2>Why do wavelengths matter?</h2>
-    <p class="lede">Not every wavelength carries the same amount of useful information. Some are shaped almost entirely by the atmosphere; others barely change at all. That difference is the whole game.</p>
 
-    <p>One especially useful region sits near <strong>760 nanometers</strong>, where molecular oxygen (O₂) absorbs light in a dense cluster of narrow lines known as the <strong>O₂ A-band</strong>. Because the amount of oxygen along a light path is very predictable, the depth of this absorption feature is sensitive to exactly how <em>far</em> that light traveled through the atmosphere — which is what makes it useful for tasks like estimating atmospheric path length.</p>
+
+<!-- =========================================================
+     SECTION 2 — WHY WAVELENGTHS MATTER
+========================================================= -->
+
+<section
+  class="section section-alt"
+  id="wavelengths"
+>
+
+  <div class="section-inner">
+
+    <p class="eyebrow">
+      Section 2
+    </p>
+
+    <h2>
+      Why do wavelengths matter?
+    </h2>
+
+    <p class="lede">
+      The atmosphere does not affect every wavelength in the
+      same way. Some spectral regions change strongly while
+      others remain relatively stable—and those differences
+      can carry useful physical information.
+    </p>
+
+
+    <p>
+      Molecules absorb radiation at characteristic
+      wavelengths, producing patterns of spectral features
+      that act like physical fingerprints.
+
+      One especially important region lies near
+      <strong>760 nanometers</strong>,
+      where molecular oxygen (O₂) produces a dense collection
+      of absorption lines known as the
+      <strong>O₂ A-band</strong>.
+
+      Because molecular oxygen is well mixed in Earth's
+      atmosphere, measurements within this spectral region
+      can contain information about atmospheric optical path
+      length and other properties of the light's journey
+      through the atmosphere.
+    </p>
+
 
     <div class="spectrum-panel">
+
+
       <div class="spectrum-header">
-        <h3>Synthetic O₂ A-band spectrum</h3>
-        <span class="synthetic-tag">Synthetic / educational data</span>
+
+        <h3>
+          Synthetic O₂ A-band spectrum
+        </h3>
+
+        <span class="synthetic-tag">
+          Synthetic / educational data
+        </span>
+
       </div>
-      <p class="spectrum-caption">Hover to inspect. This curve illustrates the <em>shape</em> of an oxygen absorption feature — it is a simplified educational model, not measured or published research data.</p>
+
+
+      <p class="spectrum-caption">
+        Hover to inspect the spectrum. This curve is a
+        simplified educational representation of oxygen
+        absorption—not measured or published research data.
+      </p>
+
+
       <div class="canvas-wrap">
-        <canvas id="baseSpectrumCanvas" width="900" height="380" role="img" aria-label="Synthetic transmission spectrum showing an absorption dip near 760 nanometers"></canvas>
-        <div class="canvas-tooltip" id="baseTooltip" hidden></div>
+
+        <canvas
+          id="baseSpectrumCanvas"
+          width="900"
+          height="380"
+          role="img"
+          aria-label="Synthetic relative transmission spectrum illustrating oxygen absorption features near the O2 A-band."
+        >
+        </canvas>
+
+        <div
+          class="canvas-tooltip"
+          id="baseTooltip"
+          hidden
+        >
+        </div>
+
       </div>
+
+
       <div class="spectrum-legend">
-        <span><i class="swatch swatch-signal"></i> Relative transmission</span>
+
+        <span>
+          <i class="swatch swatch-signal"></i>
+          Relative transmission
+        </span>
+
       </div>
+
+
     </div>
+
+
   </div>
+
 </section>
 
-<!-- ============ SECTION 4 — CHOOSE FIVE WAVELENGTHS ============ -->
-<section class="section" id="choose">
+
+
+<!-- =========================================================
+     SECTION 3 — CHOOSE FIVE WAVELENGTHS
+========================================================= -->
+
+<section
+  class="section"
+  id="choose"
+>
+
   <div class="section-inner">
-    <p class="eyebrow">Section 3 · Try it yourself</p>
-    <h2>Choose five wavelengths yourself</h2>
-    <p class="lede">If you could only measure five wavelengths — not the whole spectrum — which five would you pick to tell several signals apart?</p>
+
+    <p class="eyebrow">
+      Section 3 · Try it yourself
+    </p>
+
+    <h2>
+      If you could measure only five wavelengths,
+      which five would you choose?
+    </h2>
+
+    <p class="lede">
+      Measuring more data is not always the same as measuring
+      more useful information. Your challenge is to choose
+      five wavelengths that make several simulated spectral
+      signatures as easy to distinguish as possible.
+    </p>
+
+
 
     <div class="activity-panel">
-      <p class="activity-instructions">Click five points on the plot below. Each dashed line represents a different synthetic spectral signature (think: different atmospheric path lengths). Your goal is to pick wavelengths where the signatures are most spread apart.</p>
+
+
+      <p class="activity-instructions">
+        Each dashed curve represents a different
+        <strong>synthetic spectral signature</strong>
+        corresponding to a different simulated atmospheric
+        condition.
+
+        Click five locations on the spectrum where you think
+        the curves are easiest to tell apart.
+      </p>
+
+
       <div class="canvas-wrap">
-        <canvas id="chooseCanvas" width="900" height="380" role="img" aria-label="Interactive spectral plot for selecting five wavelength bands"></canvas>
-        <div class="canvas-tooltip" id="chooseTooltip" hidden></div>
+
+        <canvas
+          id="chooseCanvas"
+          width="900"
+          height="380"
+          role="img"
+          aria-label="Interactive synthetic spectral plot for selecting five wavelength bands."
+        >
+        </canvas>
+
+        <div
+          class="canvas-tooltip"
+          id="chooseTooltip"
+          hidden
+        >
+        </div>
+
       </div>
+
+
+
       <div class="activity-controls">
-        <div class="selected-bands" id="selectedBandsList" aria-live="polite">
-          <span class="placeholder">Selected bands: none yet</span>
+
+
+        <div
+          class="selected-bands"
+          id="selectedBandsList"
+          aria-live="polite"
+        >
+
+          <span class="placeholder">
+            Selected bands: none yet
+          </span>
+
         </div>
+
+
         <div class="button-row">
-          <button class="btn btn-secondary" id="resetChoose">Reset selection</button>
+
+          <button
+            class="btn btn-secondary"
+            id="resetChoose"
+          >
+            Reset selection
+          </button>
+
         </div>
+
+
       </div>
-      <div class="score-readout" id="chooseScoreReadout" hidden>
-        <span class="score-label">Separability score</span>
-        <span class="score-value" id="chooseScoreValue">—</span>
-        <p class="score-explain">This score measures how far apart the four synthetic signatures are, on average, when you only look at your five chosen wavelengths. Higher is better.</p>
+
+
+
+      <div
+        class="score-readout"
+        id="chooseScoreReadout"
+        hidden
+      >
+
+        <span class="score-label">
+          Separability score
+        </span>
+
+        <span
+          class="score-value"
+          id="chooseScoreValue"
+        >
+          —
+        </span>
+
+        <p class="score-explain">
+          This score estimates how far apart the synthetic
+          signatures are, on average, when the comparison is
+          restricted to your five selected wavelengths.
+          Higher values indicate greater separation in this
+          educational model.
+        </p>
+
       </div>
+
+
     </div>
+
+
   </div>
+
 </section>
 
-<!-- ============ SECTION 5 — LET THE COMPUTER OPTIMIZE ============ -->
-<section class="section section-alt" id="optimize">
+
+
+<!-- =========================================================
+     SECTION 4 — OPTIMIZATION
+========================================================= -->
+
+<section
+  class="section section-alt"
+  id="optimize"
+>
+
   <div class="section-inner">
-    <p class="eyebrow">Section 4</p>
-    <h2>Let the computer optimize the bands</h2>
-    <p class="lede">Instead of guessing, a computer can systematically test combinations of wavelengths and keep the set that separates the signatures best.</p>
+
+    <p class="eyebrow">
+      Section 4
+    </p>
+
+    <h2>
+      Can computation choose better measurements?
+    </h2>
+
+    <p class="lede">
+      Instead of choosing wavelengths by eye, a computer can
+      systematically evaluate many possible combinations and
+      ask a simple question:
+      <strong>
+        which five make the simulated signatures easiest to
+        distinguish?
+      </strong>
+    </p>
+
+
 
     <div class="text-columns">
-      <p>The demo below searches every possible combination of five wavelengths from a candidate grid and scores each one using the same separability metric from the activity above: the average pairwise distance between signatures, measured only at the selected wavelengths. It keeps whichever combination scores highest.</p>
-      <p>This is a transparent, exhaustive search over a small candidate set — not a black box, and not the exact unpublished algorithm used in any specific research project. It's meant to make the <em>idea</em> of optimization visible and understandable.</p>
+
+
+      <p>
+        The demonstration searches every possible
+        five-wavelength combination within a small candidate
+        grid.
+
+        Each combination receives a
+        <strong>separability score</strong>
+        based on the average pairwise distance between the
+        simulated signatures when only those five
+        wavelengths are used.
+      </p>
+
+
+      <p>
+        This is a transparent educational optimization—not
+        a black-box AI system and not a reproduction of an
+        unpublished research algorithm.
+
+        The goal is to make the basic idea of
+        <strong>measurement optimization</strong>
+        visible and understandable.
+      </p>
+
+
     </div>
 
+
+
     <div class="activity-panel">
-      <button class="btn btn-primary" id="optimizeBtn">Optimize five bands</button>
+
+
+      <button
+        class="btn btn-primary"
+        id="optimizeBtn"
+      >
+        Optimize five bands
+      </button>
+
+
       <div class="canvas-wrap">
-        <canvas id="optimizeCanvas" width="900" height="380" role="img" aria-label="Spectral plot comparing your selected bands to computer-optimized bands"></canvas>
+
+        <canvas
+          id="optimizeCanvas"
+          width="900"
+          height="380"
+          role="img"
+          aria-label="Synthetic spectral plot comparing user-selected wavelength bands with computer-optimized bands."
+        >
+        </canvas>
+
       </div>
-      <div class="compare-grid" id="compareGrid" hidden>
+
+
+
+      <div
+        class="compare-grid"
+        id="compareGrid"
+        hidden
+      >
+
+
         <div class="compare-card">
-          <h4>Your selection</h4>
-          <p class="compare-bands" id="compareUserBands">—</p>
-          <p class="compare-score"><span id="compareUserScore">—</span> <small>separability</small></p>
+
+          <h4>
+            Your selection
+          </h4>
+
+          <p
+            class="compare-bands"
+            id="compareUserBands"
+          >
+            —
+          </p>
+
+          <p class="compare-score">
+
+            <span id="compareUserScore">
+              —
+            </span>
+
+            <small>
+              separability
+            </small>
+
+          </p>
+
         </div>
+
+
+
         <div class="compare-card compare-card-highlight">
-          <h4>Optimized selection</h4>
-          <p class="compare-bands" id="compareOptBands">—</p>
-          <p class="compare-score"><span id="compareOptScore">—</span> <small>separability</small></p>
+
+          <h4>
+            Optimized selection
+          </h4>
+
+          <p
+            class="compare-bands"
+            id="compareOptBands"
+          >
+            —
+          </p>
+
+          <p class="compare-score">
+
+            <span id="compareOptScore">
+              —
+            </span>
+
+            <small>
+              separability
+            </small>
+
+          </p>
+
         </div>
+
+
       </div>
-      <p class="hint" id="optimizeHint">Choose five bands in the section above first, then optimize to compare.</p>
+
+
+
+      <p
+        class="hint"
+        id="optimizeHint"
+      >
+        Choose five bands in the section above first, then
+        run the optimizer to compare your choices.
+      </p>
+
+
     </div>
+
+
   </div>
+
 </section>
 
-<!-- ============ SECTION 6 — ADD NOISE ============ -->
-<section class="section" id="noise">
+
+
+<!-- =========================================================
+     SECTION 5 — NOISE AND ROBUSTNESS
+========================================================= -->
+
+<section
+  class="section"
+  id="noise"
+>
+
   <div class="section-inner">
-    <p class="eyebrow">Section 5</p>
-    <h2>Add measurement noise</h2>
-    <p class="lede">Real sensors are never perfect. How well do your bands hold up once noise enters the picture?</p>
+
+    <p class="eyebrow">
+      Section 5
+    </p>
+
+    <h2>
+      What happens when measurements aren't perfect?
+    </h2>
+
+    <p class="lede">
+      Real measurements contain uncertainty. A useful
+      measurement strategy should not work only under ideal
+      conditions—it should remain informative when noise is
+      introduced.
+    </p>
+
+
 
     <div class="text-columns">
-      <p>Every measurement includes some amount of random noise. This demo adds simulated noise to each synthetic signature many times over (a <strong>Monte Carlo simulation</strong>), then checks whether a simple nearest-signature classifier — using Euclidean distance at just your five wavelengths — can still tell the signatures apart.</p>
+
+      <p>
+        This demonstration repeatedly adds simulated random
+        noise to the synthetic signatures and tests whether
+        they can still be identified correctly.
+
+        Repeating the experiment many times is called a
+        <strong>Monte Carlo simulation</strong>.
+      </p>
+
+
+      <p>
+        For each noisy observation, a simple
+        <strong>nearest-signature classifier</strong>
+        compares the measurement with the reference
+        signatures using Euclidean distance at only the five
+        selected wavelengths.
+
+        The result shows how classification performance
+        changes as noise increases.
+      </p>
+
     </div>
 
+
+
     <div class="activity-panel">
-      <div class="noise-controls" role="group" aria-label="Select noise level">
-        <span class="noise-label">Noise level:</span>
-        <button class="noise-btn active" data-noise="0">0%</button>
-        <button class="noise-btn" data-noise="1">1%</button>
-        <button class="noise-btn" data-noise="2">2%</button>
-        <button class="noise-btn" data-noise="5">5%</button>
-        <button class="noise-btn" data-noise="10">10%</button>
+
+
+      <div
+        class="noise-controls"
+        role="group"
+        aria-label="Select noise level"
+      >
+
+        <span class="noise-label">
+          Noise level:
+        </span>
+
+        <button
+          class="noise-btn active"
+          data-noise="0"
+        >
+          0%
+        </button>
+
+        <button
+          class="noise-btn"
+          data-noise="1"
+        >
+          1%
+        </button>
+
+        <button
+          class="noise-btn"
+          data-noise="2"
+        >
+          2%
+        </button>
+
+        <button
+          class="noise-btn"
+          data-noise="5"
+        >
+          5%
+        </button>
+
+        <button
+          class="noise-btn"
+          data-noise="10"
+        >
+          10%
+        </button>
+
       </div>
-      <button class="btn btn-primary" id="runNoiseBtn">Run Monte Carlo simulation</button>
+
+
+
+      <button
+        class="btn btn-primary"
+        id="runNoiseBtn"
+      >
+        Run Monte Carlo simulation
+      </button>
+
+
+
       <div class="canvas-wrap">
-        <canvas id="noiseCanvas" width="900" height="340" role="img" aria-label="Chart comparing classification accuracy of your bands versus optimized bands across noise levels"></canvas>
+
+        <canvas
+          id="noiseCanvas"
+          width="900"
+          height="340"
+          role="img"
+          aria-label="Chart comparing classification accuracy for user-selected and optimized wavelength bands as simulated noise increases."
+        >
+        </canvas>
+
       </div>
-      <p class="hint" id="noiseHint">Choose bands and run the optimizer above first, then run the noise simulation.</p>
-      <p class="disclaimer-inline">Synthetic educational demonstration only — not measured sensor data, and not the unpublished AFIT dataset.</p>
+
+
+
+      <p
+        class="hint"
+        id="noiseHint"
+      >
+        Choose five bands and run the optimizer above first,
+        then run the noise simulation.
+      </p>
+
+
+      <p class="disclaimer-inline">
+        Synthetic educational demonstration only. The
+        spectra, noise simulations, and numerical results
+        shown here are not measured research data and do not
+        reproduce an unpublished AFIT dataset.
+      </p>
+
+
     </div>
+
+
   </div>
+
 </section>
 
 <!-- ============ SECTION 7 — KEY LESSON ============ -->
