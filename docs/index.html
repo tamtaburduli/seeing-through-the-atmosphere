@@ -57,7 +57,7 @@
   <div class="section-inner">
     <p class="eyebrow">Section 1</p>
     <h2>What happens to light in the atmosphere?</h2>
-    <p class="lede">Before a satellite ever records a number, light has already traveled a long, messy path — and the atmosphere leaves its fingerprints along the way.</p>
+    <p class="lede">A remote-sensing instrument does not observe Earth's surface in isolation. Before light reaches a sensor, it has interacted with the atmosphere—and those interactions change what the instrument measures.</p>
 
     <div class="light-path" role="img" aria-label="Diagram: sunlight travels from the sun, through the atmosphere where it is absorbed and scattered, reflects off the Earth's surface, passes through the atmosphere again, and is recorded by a satellite sensor.">
       <div class="path-node">
@@ -92,13 +92,17 @@
     </div>
 
     <div class="text-columns">
-      <p>Sunlight travels roughly 150 million kilometers before it even reaches Earth's atmosphere. On the way down, gas molecules and particles absorb some wavelengths and scatter others in random directions. What's left reflects off the surface — soil, water, vegetation, clouds — and heads back up, through the same atmosphere, before a sensor finally records it.</p>
-      <p>That means the spectrum a satellite measures is never <em>just</em> the surface. It's the surface signal, modified twice by the atmosphere in between. Untangling those two effects is a core problem in remote sensing.</p>
+      <p>In reflected-solar remote sensing, sunlight first travels downward through Earth's atmosphere. Along the way, gases and particles can absorb light at particular wavelengths or scatter it in different directions.
+
+The remaining light reaches Earth's surface, where some wavelengths are absorbed and others are reflected. That reflected light then travels upward through the atmosphere before reaching a satellite or airborne sensor.
+
+The spectrum measured by the sensor therefore contains information about both the surface and the atmosphere between the surface and the instrument.</p>
+      <p>The atmosphere doesn't just block light—it leaves information in it.</p>
     </div>
 
     <details class="tech-note">
       <summary>Technical note: absorption vs. scattering</summary>
-      <p><strong>Absorption</strong> happens when a gas molecule (like O₂, H₂O, or CO₂) removes energy at very specific wavelengths tied to its molecular structure — this is why absorption features appear as sharp dips at particular wavelengths rather than smooth dimming. <strong>Scattering</strong> happens when light bounces off molecules or aerosol particles and changes direction; it tends to act across broader wavelength ranges and depends strongly on particle size relative to wavelength (Rayleigh vs. Mie scattering).</p>
+      <p><strong>Absorption</strong> occurs when atmospheric molecules interact with radiation at characteristic wavelengths. Gases such as O₂, H₂O, and CO₂ therefore produce recognizable features in measured spectra. <strong>Scattering</strong> changes the direction in which radiation travels. The amount and wavelength dependence of scattering depend on the molecules or particles involved, which means scattering can also change the signal measured by a remote sensor.</p>
     </details>
   </div>
 </section>
