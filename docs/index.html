@@ -13,7 +13,7 @@
 
   <meta
     name="description"
-    content="Explore how the atmosphere reshapes light—and how physics, spectral measurements, and computation help us recover information from remote-sensing data."
+    content="Explore how the atmosphere reshapes light and how physics, spectral measurements, and computation help us recover information from remote-sensing data."
   >
 
   <link
@@ -215,7 +215,7 @@
     <p class="lede">
       A remote-sensing instrument does not observe Earth's
       surface in isolation. Before light reaches a sensor,
-      it has interacted with the atmosphere—and those
+      it has interacted with the atmosphere and those
       interactions change what the instrument measures.
     </p>
 
@@ -320,7 +320,97 @@
 
     </div>
 
+<!-- Visual Sun–Earth–Atmosphere remote-sensing diagram -->
 
+<div
+  class="remote-sensing-diagram"
+  role="img"
+  aria-label="Diagram showing sunlight traveling from the Sun through Earth's atmosphere to the surface, reflecting upward through the atmosphere again, and reaching a satellite sensor."
+>
+
+  <!-- SUN -->
+  <div class="rs-sun-group">
+    <div class="rs-sun"></div>
+    <span class="rs-object-label">Sun</span>
+  </div>
+
+
+  <!-- Incoming solar beam -->
+  <div class="rs-beam rs-beam-incoming">
+    <span class="rs-beam-label">
+      Incoming solar radiation
+    </span>
+  </div>
+
+
+  <!-- EARTH + ATMOSPHERE -->
+  <div class="rs-earth-system">
+
+    <div class="rs-atmosphere-shell shell-outer"></div>
+    <div class="rs-atmosphere-shell shell-inner"></div>
+
+    <div class="rs-earth">
+      <div class="rs-land land-one"></div>
+      <div class="rs-land land-two"></div>
+      <div class="rs-land land-three"></div>
+    </div>
+
+    <span class="rs-atmosphere-label">
+      Atmosphere
+    </span>
+
+    <span class="rs-earth-label">
+      Earth
+    </span>
+
+    <span class="rs-process-label rs-process-down">
+      absorption + scattering
+    </span>
+
+    <span class="rs-process-label rs-process-surface">
+      surface reflection
+    </span>
+
+  </div>
+
+
+  <!-- Reflected beam -->
+  <div class="rs-beam rs-beam-reflected">
+    <span class="rs-beam-label">
+      Reflected radiation
+    </span>
+  </div>
+
+
+  <!-- SATELLITE -->
+  <div class="rs-satellite-group">
+
+    <div class="rs-satellite">
+
+      <div class="sat-panel sat-panel-left"></div>
+
+      <div class="sat-body">
+        <div class="sat-lens"></div>
+      </div>
+
+      <div class="sat-panel sat-panel-right"></div>
+
+    </div>
+
+    <span class="rs-object-label">
+      Remote sensor
+    </span>
+
+  </div>
+
+
+  <!-- Final signal label -->
+  <div class="rs-measured-label">
+    Measured spectrum contains information from
+    <strong>both the surface and the atmosphere.</strong>
+  </div>
+
+</div>
 
     <div class="text-columns">
 
