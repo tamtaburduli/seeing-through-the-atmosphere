@@ -435,3 +435,121 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   outline: 2px solid var(--accent2);
   outline-offset: 2px;
 }
+/* =========================================================
+   SCIENTIFIC SIGNAL PATHWAY
+========================================================= */
+
+.signal-path {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: stretch;
+  gap: 1.25rem;
+
+  margin: 3rem 0;
+  padding: 2rem;
+
+  border: 1px solid rgba(95, 180, 240, 0.20);
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(30, 70, 120, 0.15),
+      rgba(8, 15, 30, 0.65)
+    );
+}
+
+
+.signal-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 160px;
+  padding: 1.5rem;
+
+  border: 1px solid rgba(95, 180, 240, 0.18);
+  border-radius: 10px;
+
+  background: rgba(13, 27, 48, 0.72);
+}
+
+
+.step-number {
+  margin-bottom: 1rem;
+
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+
+  color: var(--accent);
+}
+
+
+.step-label {
+  margin-bottom: 0.65rem;
+
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+
+  color: var(--text);
+}
+
+
+.step-detail {
+  font-size: 0.9rem;
+  line-height: 1.65;
+
+  color: var(--text-dim);
+}
+
+
+.signal-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 115px;
+
+  text-align: center;
+  color: var(--accent);
+}
+
+
+.signal-arrow span {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+
+.signal-arrow small {
+  max-width: 120px;
+  margin-top: 0.75rem;
+
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  line-height: 1.5;
+
+  color: var(--text-faint);
+}
+
+
+@media (max-width: 900px) {
+
+  .signal-path {
+    grid-template-columns: 1fr;
+  }
+
+
+  .signal-arrow {
+    min-height: 65px;
+  }
+
+
+  .signal-arrow span {
+    transform: rotate(90deg);
+  }
+
+}
