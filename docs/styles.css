@@ -1280,3 +1280,62 @@ summary:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+/* =========================================================
+   ABOUT THE CREATOR
+   ========================================================= */
+
+.about-creator {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.about-photo-wrap {
+  width: 100%;
+}
+
+.about-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+
+.about-creator-text {
+  max-width: 760px;
+}
+
+.about-interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 1.8rem;
+}
+
+.about-interests span {
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 720px) {
+
+  .about-creator {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .about-photo-wrap {
+    max-width: 280px;
+  }
+
+}
