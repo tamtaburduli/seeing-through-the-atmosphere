@@ -446,19 +446,19 @@ REMOTE SENSING DIAGRAM IMAGE — CONTROLLED SIZE
 ========================================================= */
 
 .remote-sensing-image-wrap {
-width: 100%;
-margin: 3rem auto;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 0 24px;
-box-sizing: border-box;
+    width: 100%;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    box-sizing: border-box;
 }
 
 .remote-sensing-image {
-width: 750px;
-max-width: 90vw;
-height: auto;
-display: block;
-border-radius: 16px;
+    width: 750px;
+    max-width: 90vw;
+    height: auto;
+    display: block;
+    border-radius: 16px;
 }
