@@ -99,7 +99,7 @@
     </a>
 
     <a href="#quiz">
-      PNNL
+      Quiz
     </a>
 
     <a href="#careers">
@@ -223,18 +223,15 @@
       interactions change what the instrument measures.
     </p>
 
-    <!-- Visual Sun–Earth–Atmosphere remote-sensing diagram -->
-    
     <div class="remote-sensing-image-wrap">
-  <img
-    src="remote-sensing-diagram.png"
-    alt="Diagram showing sunlight traveling through Earth's atmosphere to the surface, reflecting upward through the atmosphere, and reaching a remote sensor."
-    class="remote-sensing-image"
-  >
-</div>
-    
-<div class="text-columns">
+      <img
+        src="remote-sensing-diagram.png"
+        alt="Diagram showing sunlight traveling through Earth's atmosphere to the surface, reflecting upward through the atmosphere, and reaching a remote sensor."
+        class="remote-sensing-image"
+      >
+    </div>
 
+    <div class="text-columns">
 
       <p>
         In reflected-solar remote sensing, sunlight first
@@ -252,7 +249,6 @@
         or airborne sensor.
       </p>
 
-
       <p>
         The spectrum measured by the sensor therefore
         contains information about both the
@@ -269,9 +265,7 @@
         </strong>
       </p>
 
-
     </div>
-
 
 
     <details class="tech-note">
@@ -297,7 +291,6 @@
       </p>
 
     </details>
-
 
   </div>
 
@@ -331,7 +324,6 @@
       can carry useful physical information.
     </p>
 
-
     <p>
       Molecules absorb radiation at characteristic
       wavelengths, producing patterns of spectral features
@@ -352,7 +344,6 @@
 
 
     <div class="spectrum-panel">
-
 
       <div class="spectrum-header">
 
@@ -404,9 +395,7 @@
 
       </div>
 
-
     </div>
-
 
   </div>
 
@@ -442,9 +431,7 @@
     </p>
 
 
-
     <div class="activity-panel">
-
 
       <p class="activity-instructions">
         Each dashed curve represents a different
@@ -478,9 +465,7 @@
       </div>
 
 
-
       <div class="activity-controls">
-
 
         <div
           class="selected-bands"
@@ -506,9 +491,7 @@
 
         </div>
 
-
       </div>
-
 
 
       <div
@@ -538,9 +521,7 @@
 
       </div>
 
-
     </div>
-
 
   </div>
 
@@ -578,9 +559,7 @@
     </p>
 
 
-
     <div class="text-columns">
-
 
       <p>
         The demonstration searches every possible
@@ -594,7 +573,6 @@
         wavelengths are used.
       </p>
 
-
       <p>
         This is a transparent educational optimization—not
         a black-box AI system and not a reproduction of an
@@ -605,13 +583,10 @@
         visible and understandable.
       </p>
 
-
     </div>
 
 
-
     <div class="activity-panel">
-
 
       <button
         class="btn btn-primary"
@@ -635,13 +610,11 @@
       </div>
 
 
-
       <div
         class="compare-grid"
         id="compareGrid"
         hidden
       >
-
 
         <div class="compare-card">
 
@@ -671,7 +644,6 @@
         </div>
 
 
-
         <div class="compare-card compare-card-highlight">
 
           <h4>
@@ -699,9 +671,7 @@
 
         </div>
 
-
       </div>
-
 
 
       <p
@@ -712,9 +682,7 @@
         run the optimizer to compare your choices.
       </p>
 
-
     </div>
-
 
   </div>
 
@@ -749,7 +717,6 @@
     </p>
 
 
-
     <div class="text-columns">
 
       <p>
@@ -760,7 +727,6 @@
         Repeating the experiment many times is called a
         <strong>Monte Carlo simulation</strong>.
       </p>
-
 
       <p>
         For each noisy observation, a simple
@@ -776,9 +742,7 @@
     </div>
 
 
-
     <div class="activity-panel">
-
 
       <div
         class="noise-controls"
@@ -828,14 +792,12 @@
       </div>
 
 
-
       <button
         class="btn btn-primary"
         id="runNoiseBtn"
       >
         Run Monte Carlo simulation
       </button>
-
 
 
       <div class="canvas-wrap">
@@ -852,7 +814,6 @@
       </div>
 
 
-
       <p
         class="hint"
         id="noiseHint"
@@ -861,122 +822,281 @@
         then run the noise simulation.
       </p>
 
-
-     
-
-
     </div>
 
+  </div>
+
+</section>
+
+
+
+<!-- ============ KEY LESSON ============ -->
+
+<section
+  class="section section-alt section-lesson"
+  id="lesson"
+>
+
+  <div class="section-inner">
+
+    <p class="eyebrow">
+      The key lesson
+    </p>
+
+    <h2>
+      Physical knowledge + good measurements + computation can extract a lot from a complicated spectrum.
+    </h2>
+
+    <p class="lede">
+      This demonstration illustrates one approach to choosing informative
+      spectral measurements — not the only approach, and not a finished
+      research result. The broader idea generalizes far beyond five bands
+      near 760 nm: knowing <em>where</em> to look is often as important as
+      how well you can measure.
+    </p>
 
   </div>
 
 </section>
 
-<!-- ============ SECTION 7 — KEY LESSON ============ -->
-<section class="section section-alt section-lesson" id="lesson">
-  <div class="section-inner">
-    <p class="eyebrow">The key lesson</p>
-    <h2>Physical knowledge + good measurements + computation can extract a lot from a complicated spectrum.</h2>
-    <p class="lede">This demonstration illustrates one approach to choosing informative spectral measurements — not the only approach, and not a finished research result. The broader idea generalizes far beyond five bands near 760 nm: knowing <em>where</em> to look is often as important as how well you can measure.</p>
-  </div>
-</section>
 
-<!-- ============ SECTION 8 — PNNL PHYSICS-INFORMED ML ============ -->
-<section class="section" id="pnnl">
+
+<!-- ============ PNNL PHYSICS-INFORMED ML ============ -->
+
+<section
+  class="section"
+  id="pnnl"
+>
+
   <div class="section-inner">
-    <p class="eyebrow">Section 6 · A related idea, a different lab</p>
-    <h2>PNNL: physics-informed machine learning</h2>
-    <p class="lede">Researchers at Pacific Northwest National Laboratory (PNNL) apply a related philosophy to a different remote-sensing problem: atmospheric correction.</p>
+
+    <p class="eyebrow">
+      Section 6 · A related idea, a different lab
+    </p>
+
+    <h2>
+      PNNL: physics-informed machine learning
+    </h2>
+
+    <p class="lede">
+      Researchers at Pacific Northwest National Laboratory (PNNL) apply
+      a related philosophy to a different remote-sensing problem:
+      atmospheric correction.
+    </p>
+
 
     <div class="text-columns">
-      <p>As Section 1 explained, the spectrum a satellite measures is shaped by the atmosphere on the way down <em>and</em> on the way back up. <strong>Atmospheric correction</strong> is the process of estimating and removing those atmospheric effects so scientists can recover the true surface signal underneath.</p>
-      <p>PNNL's approach explores <strong>physics-informed machine learning</strong>: instead of treating atmospheric correction as a purely data-driven, black-box prediction problem, known physical relationships about how radiation interacts with the atmosphere are built into the model itself.</p>
+
+      <p>
+        As Section 1 explained, the spectrum a satellite measures is shaped
+        by the atmosphere on the way down <em>and</em> on the way back up.
+        <strong>Atmospheric correction</strong> is the process of estimating
+        and removing those atmospheric effects so scientists can recover
+        the true surface signal underneath.
+      </p>
+
+      <p>
+        PNNL's approach explores
+        <strong>physics-informed machine learning</strong>:
+        instead of treating atmospheric correction as a purely data-driven,
+        black-box prediction problem, known physical relationships about how
+        radiation interacts with the atmosphere are built into the model itself.
+      </p>
+
     </div>
+
 
     <div class="ml-compare">
+
       <div class="ml-diagram">
-        <h4>Data-only machine learning</h4>
+
+        <h4>
+          Data-only machine learning
+        </h4>
+
         <div class="ml-flow">
-          <span class="ml-box">Measured data</span>
-          <span class="ml-arrow">→</span>
-          <span class="ml-box ml-box-model">Model</span>
-          <span class="ml-arrow">→</span>
-          <span class="ml-box">Prediction</span>
-        </div>
-      </div>
-      <div class="ml-diagram ml-diagram-highlight">
-        <h4>Physics-informed machine learning</h4>
-        <div class="ml-flow">
-          <span class="ml-box-group">
-            <span class="ml-box">Measured data</span>
-            <span class="ml-plus">+</span>
-            <span class="ml-box ml-box-physics">Physical knowledge</span>
+
+          <span class="ml-box">
+            Measured data
           </span>
-          <span class="ml-arrow">→</span>
-          <span class="ml-box ml-box-model">Model</span>
-          <span class="ml-arrow">→</span>
-          <span class="ml-box">Physically informed prediction</span>
+
+          <span class="ml-arrow">
+            →
+          </span>
+
+          <span class="ml-box ml-box-model">
+            Model
+          </span>
+
+          <span class="ml-arrow">
+            →
+          </span>
+
+          <span class="ml-box">
+            Prediction
+          </span>
+
         </div>
+
       </div>
+
+
+      <div class="ml-diagram ml-diagram-highlight">
+
+        <h4>
+          Physics-informed machine learning
+        </h4>
+
+        <div class="ml-flow">
+
+          <span class="ml-box-group">
+
+            <span class="ml-box">
+              Measured data
+            </span>
+
+            <span class="ml-plus">
+              +
+            </span>
+
+            <span class="ml-box ml-box-physics">
+              Physical knowledge
+            </span>
+
+          </span>
+
+          <span class="ml-arrow">
+            →
+          </span>
+
+          <span class="ml-box ml-box-model">
+            Model
+          </span>
+
+          <span class="ml-arrow">
+            →
+          </span>
+
+          <span class="ml-box">
+            Physically informed prediction
+          </span>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <p>Why incorporate physics at all? Training data for atmospheric correction can be limited, expensive to collect, noisy, or simply not cover every real-world condition. When the underlying physics is already well understood, building it into the model can help fill those gaps, keep predictions physically plausible, and reduce how much a model has to "learn from scratch."</p>
+
+    <p>
+      Why incorporate physics at all? Training data for atmospheric correction
+      can be limited, expensive to collect, noisy, or simply not cover every
+      real-world condition. When the underlying physics is already well
+      understood, building it into the model can help fill those gaps, keep
+      predictions physically plausible, and reduce how much a model has to
+      "learn from scratch."
+    </p>
+
 
     <div class="callout callout-boundary">
-      <p><strong>Two distinct ideas, clearly separated:</strong> the five-band spectral optimization demo above is inspired by separate research into passive atmospheric sensing. It is <em>not</em> PNNL's atmospheric-correction method, and this site does not reproduce PNNL's model. They share a philosophy — using physical understanding to get more out of limited measurements — but they are different techniques applied to different problems.</p>
+
+      <p>
+        <strong>Two distinct ideas, clearly separated:</strong>
+        the five-band spectral optimization demo above is inspired by separate
+        research into passive atmospheric sensing. It is <em>not</em> PNNL's
+        atmospheric-correction method, and this site does not reproduce PNNL's
+        model. They share a philosophy — using physical understanding to get
+        more out of limited measurements — but they are different techniques
+        applied to different problems.
+      </p>
+
     </div>
+
   </div>
+
 </section>
 
-<!-- ============ SECTION 9 — WHY IT MATTERS ============ -->
-<section class="section section-alt" id="impact">
+
+
+<!-- ============ WHY IT MATTERS ============ -->
+
+<section
+  class="section section-alt"
+  id="impact"
+>
+
   <div class="section-inner">
 
-    <p class="eyebrow">Section 7</p>
+    <p class="eyebrow">
+      Section 7
+    </p>
 
-    <h2>Why atmospheric correction matters</h2>
+    <h2>
+      Why atmospheric correction matters
+    </h2>
 
     <p class="lede">
       Accurately separating atmospheric effects from surface signals underpins
       a wide range of real-world Earth observation work.
     </p>
 
+
     <div class="atmospheric-correction-image-wrap">
+
       <img
         src="atmospheric-correction.png"
         alt="Diagram illustrating atmospheric correction and remote sensing"
         class="atmospheric-correction-image"
       >
+
     </div>
 
+
     <div class="correction-takeaway">
-      <h3>From measurement to meaning</h3>
+
+      <h3>
+        From measurement to meaning
+      </h3>
 
       <p>
-        A satellite does not observe the surface alone. Light carries the imprint
-        of both the surface and the atmosphere. Atmospheric correction uses our
-        understanding of absorption, scattering, and radiative transfer to
-        separate those contributions and recover a more useful estimate of the
-        surface signal.
+        A satellite does not observe the surface alone. Light carries the
+        imprint of both the surface and the atmosphere. Atmospheric correction
+        uses our understanding of absorption, scattering, and radiative transfer
+        to separate those contributions and recover a more useful estimate of
+        the surface signal.
       </p>
 
       <p class="correction-key-idea">
         The atmosphere is not just interference—it is part of the physics
         encoded in the measurement.
       </p>
+
     </div>
 
   </div>
 
 </section>
 
-  <!-- ============ QUIZ ============ -->
-<section class="section section-alt" id="quiz">
+
+
+<!-- =========================================================
+     QUIZ
+========================================================= -->
+
+<section
+  class="section"
+  id="quiz"
+>
+
   <div class="section-inner">
 
-    <p class="eyebrow">Test what you learned</p>
+    <p class="eyebrow">
+      Test what you learned
+    </p>
 
-    <h2>Can you read the signal?</h2>
+    <h2>
+      Can you read the signal?
+    </h2>
 
     <p class="lede">
       Try this short quiz to test what you learned about atmospheric
@@ -984,10 +1104,18 @@
       machine learning.
     </p>
 
+
     <div class="quiz-container">
 
-      <div class="quiz-question" data-answer="b">
-        <h3>1. Why doesn't a satellite measure a purely surface signal?</h3>
+
+      <div
+        class="quiz-question"
+        data-answer="b"
+      >
+
+        <h3>
+          1. Why doesn't a satellite measure a purely surface signal?
+        </h3>
 
         <label>
           <input type="radio" name="q1" value="a">
@@ -1008,11 +1136,18 @@
           <input type="radio" name="q1" value="d">
           Satellite sensors measure only temperature
         </label>
+
       </div>
 
 
-      <div class="quiz-question" data-answer="c">
-        <h3>2. What is special about the O₂ A-band near 760 nm?</h3>
+      <div
+        class="quiz-question"
+        data-answer="c"
+      >
+
+        <h3>
+          2. What is special about the O₂ A-band near 760 nm?
+        </h3>
 
         <label>
           <input type="radio" name="q2" value="a">
@@ -1033,11 +1168,18 @@
           <input type="radio" name="q2" value="d">
           It can only be observed from the ground
         </label>
+
       </div>
 
 
-      <div class="quiz-question" data-answer="a">
-        <h3>3. Why can choosing only a few wavelengths still be useful?</h3>
+      <div
+        class="quiz-question"
+        data-answer="a"
+      >
+
+        <h3>
+          3. Why can choosing only a few wavelengths still be useful?
+        </h3>
 
         <label>
           <input type="radio" name="q3" value="a">
@@ -1058,11 +1200,18 @@
           <input type="radio" name="q3" value="d">
           Atmospheric absorption disappears when fewer wavelengths are measured
         </label>
+
       </div>
 
 
-      <div class="quiz-question" data-answer="d">
-        <h3>4. Why test a wavelength-selection strategy with simulated noise?</h3>
+      <div
+        class="quiz-question"
+        data-answer="d"
+      >
+
+        <h3>
+          4. Why test a wavelength-selection strategy with simulated noise?
+        </h3>
 
         <label>
           <input type="radio" name="q4" value="a">
@@ -1083,11 +1232,18 @@
           <input type="radio" name="q4" value="d">
           To test whether the strategy remains informative when measurements are imperfect
         </label>
+
       </div>
 
 
-      <div class="quiz-question" data-answer="b">
-        <h3>5. What distinguishes physics-informed machine learning from a purely data-driven model?</h3>
+      <div
+        class="quiz-question"
+        data-answer="b"
+      >
+
+        <h3>
+          5. What distinguishes physics-informed machine learning from a purely data-driven model?
+        </h3>
 
         <label>
           <input type="radio" name="q5" value="a">
@@ -1108,18 +1264,28 @@
           <input type="radio" name="q5" value="d">
           It can only be used for weather forecasting
         </label>
+
       </div>
 
 
       <div class="quiz-actions">
-        <button class="btn btn-primary" id="checkQuiz">
+
+        <button
+          class="btn btn-primary"
+          id="checkQuiz"
+        >
           Check answers
         </button>
 
-        <button class="btn btn-secondary" id="resetQuiz">
+        <button
+          class="btn btn-secondary"
+          id="resetQuiz"
+        >
           Try again
         </button>
+
       </div>
+
 
       <div
         class="quiz-result"
@@ -1127,183 +1293,353 @@
         aria-live="polite"
       ></div>
 
+
     </div>
 
   </div>
+
 </section>
 
-<!-- ============ SECTION 10 — CAREERS ============ -->
-<section class="section" id="careers">
+
+
+<!-- =========================================================
+     CAREERS
+========================================================= -->
+
+<section
+  class="section section-alt"
+  id="careers"
+>
+
   <div class="section-inner">
-    <p class="eyebrow">Section 8 · Get involved</p>
-    <h2>How students get into this work</h2>
-    <p class="lede">This kind of research sits at the intersection of physics, data, and software — and there are real, well-trodden paths into it.</p>
+
+    <p class="eyebrow">
+      Section 8 · Get involved
+    </p>
+
+    <h2>
+      How students get into this work
+    </h2>
+
+    <p class="lede">
+      This kind of research sits at the intersection of physics,
+      data, and software — and there are real, well-trodden paths into it.
+    </p>
+
 
     <div class="pathway">
+
       <div class="pathway-step">
         <span class="pathway-index">Start</span>
-        <p>Physics · Earth Science · Engineering · Computer Science</p>
+        <p>
+          Physics · Earth Science · Engineering · Computer Science
+        </p>
       </div>
+
       <div class="pathway-connector"></div>
+
       <div class="pathway-step">
         <span class="pathway-index">Build</span>
-        <p>Python · spectroscopy · remote sensing · statistics · machine learning</p>
+        <p>
+          Python · spectroscopy · remote sensing · statistics · machine learning
+        </p>
       </div>
+
       <div class="pathway-connector"></div>
+
       <div class="pathway-step">
         <span class="pathway-index">Practice</span>
-        <p>Undergraduate research · internships</p>
+        <p>
+          Undergraduate research · internships
+        </p>
       </div>
+
       <div class="pathway-connector"></div>
+
       <div class="pathway-step">
         <span class="pathway-index">Land</span>
-        <p>A DOE National Laboratory</p>
+        <p>
+          National labs · NASA · research institutes · graduate research
+        </p>
       </div>
+
     </div>
+
 
     <div class="role-grid">
+
       <div class="role-card">
-        <h4>Remote Sensing Scientist</h4>
-        <p>Designs and interprets measurements from satellites, aircraft, or ground instruments to study the Earth's surface and atmosphere.</p>
+        <h4>
+          Remote Sensing Scientist
+        </h4>
+        <p>
+          Designs and interprets measurements from satellites, aircraft,
+          or ground instruments to study the Earth's surface and atmosphere.
+        </p>
       </div>
+
       <div class="role-card">
-        <h4>Atmospheric Scientist</h4>
-        <p>Studies how the atmosphere behaves and interacts with radiation — the science behind correction and interpretation methods.</p>
+        <h4>
+          Atmospheric Scientist
+        </h4>
+        <p>
+          Studies how the atmosphere behaves and interacts with radiation —
+          the science behind correction and interpretation methods.
+        </p>
       </div>
+
       <div class="role-card">
-        <h4>Data Scientist</h4>
-        <p>Builds statistical and machine-learning models to extract patterns and signals from large, complex scientific datasets.</p>
+        <h4>
+          Data Scientist
+        </h4>
+        <p>
+          Builds statistical and machine-learning models to extract patterns
+          and signals from large, complex scientific datasets.
+        </p>
       </div>
+
       <div class="role-card">
-        <h4>Computational Scientist</h4>
-        <p>Develops the algorithms and simulation tools — like the optimization and Monte Carlo methods on this page — that make large-scale analysis possible.</p>
+        <h4>
+          Computational Scientist
+        </h4>
+        <p>
+          Develops the algorithms and simulation tools — like the optimization
+          and Monte Carlo methods on this page — that make large-scale analysis
+          possible.
+        </p>
       </div>
+
       <div class="role-card">
-        <h4>Research Engineer</h4>
-        <p>Turns scientific methods into working software and instruments that other researchers can actually use.</p>
+        <h4>
+          Research Engineer
+        </h4>
+        <p>
+          Turns scientific methods into working software and instruments
+          that other researchers can actually use.
+        </p>
       </div>
+
     </div>
+
+
+    <div class="student-links">
+
+      <h3>
+        Explore opportunities
+      </h3>
+
+      <p>
+        Ready to take the next step? These programs connect students with
+        research, internships, and national laboratory opportunities.
+      </p>
+
+
+      <div class="student-link-grid">
+
+
+        <a
+          href="https://stemgateway.nasa.gov/s/explore-opportunities?opportunitytype=internships"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="student-link-card"
+        >
+          <span class="student-link-label">
+            NASA
+          </span>
+
+          <strong>
+            NASA Internships
+          </strong>
+
+          <span>
+            Explore NASA science, engineering, and research internships →
+          </span>
+        </a>
+
+
+        <a
+          href="https://science.osti.gov/wdts/suli"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="student-link-card"
+        >
+          <span class="student-link-label">
+            DOE
+          </span>
+
+          <strong>
+            Science Undergraduate Laboratory Internships
+          </strong>
+
+          <span>
+            Explore SULI research opportunities at DOE National Laboratories →
+          </span>
+        </a>
+
+
+        <a
+          href="https://afresearchlab.com/careers-and-opportunities/students-and-faculty/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="student-link-card"
+        >
+          <span class="student-link-label">
+            AFRL
+          </span>
+
+          <strong>
+            Students &amp; Faculty Opportunities
+          </strong>
+
+          <span>
+            Explore research and internship opportunities with AFRL →
+          </span>
+        </a>
+
+
+        <a
+          href="https://www.afit.edu/CZ/page.cfm?page=514"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="student-link-card"
+        >
+          <span class="student-link-label">
+            AFIT
+          </span>
+
+          <strong>
+            Student Research Opportunities
+          </strong>
+
+          <span>
+            Explore opportunities at the Air Force Institute of Technology →
+          </span>
+        </a>
+
+
+        <a
+          href="https://www.lspace.asu.edu/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="student-link-card"
+        >
+          <span class="student-link-label">
+            NASA L'SPACE
+          </span>
+
+          <strong>
+            L'SPACE Program
+          </strong>
+
+          <span>
+            Build NASA mission-development and workforce skills →
+          </span>
+        </a>
+
+
+        <a
+          href="https://intern.usajobs.gov/search/results?wt=15328&s=salary&sd=desc&p=1"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="student-link-card"
+        >
+          <span class="student-link-label">
+            USAJOBS
+          </span>
+
+          <strong>
+            Federal Internships
+          </strong>
+
+          <span>
+            Search current federal student and internship opportunities →
+          </span>
+        </a>
+
+
+        <a
+          href="https://orise.orau.gov/NNSA-IMPACT/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="student-link-card"
+        >
+          <span class="student-link-label">
+            ORISE
+          </span>
+
+          <strong>
+            NNSA Minority Serving Institution Partnership Program
+          </strong>
+
+          <span>
+            Explore NNSA research and professional-development opportunities →
+          </span>
+        </a>
+
+
+        <a
+          href="https://orise.orau.gov/internships-fellowships/index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="student-link-card"
+        >
+          <span class="student-link-label">
+            ORISE
+          </span>
+
+          <strong>
+            Internships &amp; Fellowships
+          </strong>
+
+          <span>
+            Explore research opportunities across federal agencies →
+          </span>
+        </a>
+
+
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="student-links">
-  <h3>Explore opportunities</h3>
-
-  <p>
-    Ready to take the next step? These programs connect students with
-    research, internships, and national laboratory opportunities.
-  </p>
-
-  <div class="student-link-grid">
-
-  <a
-    href="https://stemgateway.nasa.gov/s/explore-opportunities?opportunitytype=internships"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="student-link-card"
-  >
-    <span class="student-link-label">NASA</span>
-    <strong>NASA Internships</strong>
-    <span>Explore NASA science, engineering, and research internships →</span>
-  </a>
-
-  <a
-    href="https://science.osti.gov/wdts/suli"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="student-link-card"
-  >
-    <span class="student-link-label">DOE</span>
-    <strong>Science Undergraduate Laboratory Internships</strong>
-    <span>Explore SULI research opportunities at DOE National Laboratories →</span>
-  </a>
-
-  <a
-    href="https://afresearchlab.com/careers-and-opportunities/students-and-faculty/"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="student-link-card"
-  >
-    <span class="student-link-label">AFRL</span>
-    <strong>Students & Faculty Opportunities</strong>
-    <span>Explore research and internship opportunities with AFRL →</span>
-  </a>
-
-  <a
-    href="https://www.afit.edu/CZ/page.cfm?page=514"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="student-link-card"
-  >
-    <span class="student-link-label">AFIT</span>
-    <strong>Student Research Opportunities</strong>
-    <span>Explore opportunities at the Air Force Institute of Technology →</span>
-  </a>
-
-  <a
-    href="https://www.lspace.asu.edu/"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="student-link-card"
-  >
-    <span class="student-link-label">NASA L'SPACE</span>
-    <strong>L'SPACE Program</strong>
-    <span>Build NASA mission-development and workforce skills →</span>
-  </a>
-
-  <a
-    href="https://intern.usajobs.gov/search/results?wt=15328&s=salary&sd=desc&p=1"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="student-link-card"
-  >
-    <span class="student-link-label">USAJOBS</span>
-    <strong>Federal Internships</strong>
-    <span>Search current federal student and internship opportunities →</span>
-  </a>
-
-  <a
-    href="https://orise.orau.gov/NNSA-IMPACT/"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="student-link-card"
-  >
-    <span class="student-link-label">ORISE</span>
-    <strong>NNSA Minority Serving Institution Partnership Program</strong>
-    <span>Explore NNSA research and professional-development opportunities →</span>
-  </a>
-
-  <a
-    href="https://orise.orau.gov/internships-fellowships/index.html"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="student-link-card"
-  >
-    <span class="student-link-label">ORISE</span>
-    <strong>Internships & Fellowships</strong>
-    <span>Explore research opportunities across federal agencies →</span>
-  </a>
-
-</div>
-</div>
 </section>
 
-<!-- ============ ABOUT ============ -->
-<!-- ============ ABOUT THE CREATOR ============ -->
-<section class="section" id="about">
+
+
+<!-- =========================================================
+     ABOUT THE CREATOR
+========================================================= -->
+
+<section
+  class="section"
+  id="about"
+>
+
   <div class="section-inner">
 
-    <p class="eyebrow">About the creator</p>
-    <h2>Hi, I'm Tamta.</h2>
+    <p class="eyebrow">
+      About the creator
+    </p>
+
+    <h2>
+      Hi, I'm Tamta.
+    </h2>
+
 
     <div class="about-creator">
 
+
       <div class="about-photo-wrap">
+
         <img
           src="tamta-burduli.jpg"
           alt="Tamta Burduli"
           class="about-photo"
         >
+
       </div>
+
 
       <div class="about-creator-text">
 
@@ -1314,12 +1650,14 @@
         </p>
 
         <p>
-          I created <strong>Seeing Through the Atmosphere</strong> as a
-          science-communication project for the URA STEM Ambassador Challenge.
-          My goal was to make some of the ideas behind atmospheric remote
-          sensing more approachable — how light interacts with the atmosphere,
-          why wavelength selection matters, how computation can help design
-          measurements, and how physics can guide machine-learning models.
+          I created
+          <strong>Seeing Through the Atmosphere</strong>
+          as a science-communication project for the URA STEM Ambassador
+          Challenge. My goal was to make some of the ideas behind atmospheric
+          remote sensing more approachable — how light interacts with the
+          atmosphere, why wavelength selection matters, how computation can
+          help design measurements, and how physics can guide machine-learning
+          models.
         </p>
 
         <p>
@@ -1329,32 +1667,66 @@
           educational data and do not reproduce unpublished research datasets.
         </p>
 
+
         <div class="about-interests">
-          <span>REMOTE SENSING</span>
-          <span>PHYSICS</span>
-          <span>SPECTROSCOPY</span>
-          <span>EARTH &amp; PLANETARY SCIENCE</span>
+
+          <span>
+            REMOTE SENSING
+          </span>
+
+          <span>
+            PHYSICS
+          </span>
+
+          <span>
+            SPECTROSCOPY
+          </span>
+
+          <span>
+            EARTH &amp; PLANETARY SCIENCE
+          </span>
+
         </div>
+
 
       </div>
 
     </div>
 
   </div>
+
 </section>
 
-<!-- ============ SECTION 12 — REFERENCES ============ -->
-<section class="section" id="references">
+
+
+<!-- =========================================================
+     SOURCES & REFERENCES
+========================================================= -->
+
+<section
+  class="section"
+  id="references"
+>
+
   <div class="section-inner">
 
-    <p class="eyebrow">Section 10</p>
+    <p class="eyebrow">
+      Sources
+    </p>
 
-    <h2>Sources &amp; references</h2>
+    <h2>
+      Sources &amp; references
+    </h2>
 
-    <ul class="ref-list" id="refList">
+
+    <ul
+      class="ref-list"
+      id="refList"
+    >
 
       <li>
         Pacific Northwest National Laboratory (2024).
+
         <a
           href="https://www.pnnl.gov/news-media/ai-model-harnesses-physics-autocorrect-remote-sensing-data"
           target="_blank"
@@ -1362,11 +1734,14 @@
         >
           AI Model Harnesses Physics to Autocorrect Remote Sensing Data
         </a>.
+
         Physics-informed machine learning for atmospheric correction.
       </li>
 
+
       <li>
         NASA Jet Propulsion Laboratory.
+
         <a
           href="https://ocov2.jpl.nasa.gov/science/measurement-approach/"
           target="_blank"
@@ -1374,13 +1749,16 @@
         >
           OCO-2: Measurement Approach
         </a>.
+
         Background on the O₂ A-band, atmospheric oxygen absorption,
         and the use of oxygen measurements to characterize atmospheric
         pressure and optical path length.
       </li>
 
+
       <li>
         NASA.
+
         <a
           href="https://science.nasa.gov/missions/landsat/seeing-clearlya-peek-into-the-world-of-atmospheric-correction/"
           target="_blank"
@@ -1388,11 +1766,174 @@
         >
           Seeing Clearly—A Peek into the World of Atmospheric Correction
         </a>.
+
         An introduction to atmospheric correction and the retrieval
         of surface reflectance from satellite measurements.
       </li>
 
+
     </ul>
 
   </div>
+
 </section>
+
+
+
+</main>
+
+
+
+<footer class="site-footer">
+
+  <p>
+    Seeing Through the Atmosphere — a science communication project
+    for the URA STEM Ambassador Challenge.
+  </p>
+
+  <p class="footer-disclaimer">
+    All spectral data shown in interactive demos is synthetic and
+    for educational purposes only.
+  </p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+
+<!-- =========================================================
+     QUIZ LOGIC
+========================================================= -->
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const checkQuizBtn = document.getElementById('checkQuiz');
+  const resetQuizBtn = document.getElementById('resetQuiz');
+  const quizResult = document.getElementById('quizResult');
+
+
+  if (!checkQuizBtn || !resetQuizBtn || !quizResult) {
+    return;
+  }
+
+
+  checkQuizBtn.addEventListener('click', () => {
+
+    const questions =
+      document.querySelectorAll('.quiz-question');
+
+    let score = 0;
+    let answered = 0;
+
+
+    questions.forEach((question) => {
+
+      const selected =
+        question.querySelector(
+          'input[type="radio"]:checked'
+        );
+
+
+      question.classList.remove(
+        'correct',
+        'incorrect'
+      );
+
+
+      if (!selected) {
+        return;
+      }
+
+
+      answered++;
+
+
+      if (selected.value === question.dataset.answer) {
+
+        score++;
+
+        question.classList.add('correct');
+
+      } else {
+
+        question.classList.add('incorrect');
+
+      }
+
+    });
+
+
+    quizResult.style.display = 'block';
+
+
+    if (answered < questions.length) {
+
+      quizResult.textContent =
+        `You've answered ${answered} of ${questions.length} questions. Complete all five to see your final score.`;
+
+      return;
+
+    }
+
+
+    if (score === questions.length) {
+
+      quizResult.textContent =
+        `${score}/${questions.length} — Excellent. You’re thinking like a remote-sensing scientist.`;
+
+    } else if (score >= 3) {
+
+      quizResult.textContent =
+        `${score}/${questions.length} — Nice work. You’ve got the main ideas. Review the sections you missed and try again.`;
+
+    } else {
+
+      quizResult.textContent =
+        `${score}/${questions.length} — Keep exploring the signal. Revisit the atmosphere, wavelengths, and physics-informed ML sections and try again.`;
+
+    }
+
+  });
+
+
+
+  resetQuizBtn.addEventListener('click', () => {
+
+    document
+      .querySelectorAll('.quiz-question')
+      .forEach((question) => {
+
+        question.classList.remove(
+          'correct',
+          'incorrect'
+        );
+
+
+        question
+          .querySelectorAll('input[type="radio"]')
+          .forEach((input) => {
+
+            input.checked = false;
+
+          });
+
+      });
+
+
+    quizResult.style.display = 'none';
+    quizResult.textContent = '';
+
+  });
+
+});
+
+</script>
+
+
+
+</body>
+</html>
