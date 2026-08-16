@@ -204,7 +204,7 @@ a { color: var(--accent2); }
 
 /* ---------- Sections ---------- */
 .section { padding: 96px 28px; }
-.section-alt { background: var(--bg-alt); }
+.section-alt { background: #040A1B;}
 .section-inner { max-width: var(--max); margin: 0 auto; }
 .lede { font-size: 1.12rem; color: var(--text); max-width: 700px; margin-bottom: 2em; }
 .text-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 1.6em 0; }
