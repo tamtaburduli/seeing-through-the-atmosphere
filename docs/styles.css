@@ -1082,8 +1082,8 @@ summary:focus-visible {
 }
 
 .atmospheric-correction-image {
-  width: 100%;
-  max-width: 1100px;
+  width: 750px;
+  max-width: 90vw;
   height: auto;
   display: block;
 }
