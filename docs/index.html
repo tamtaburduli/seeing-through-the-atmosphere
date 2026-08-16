@@ -970,6 +970,168 @@
 
 </section>
 
+  <!-- ============ QUIZ ============ -->
+<section class="section section-alt" id="quiz">
+  <div class="section-inner">
+
+    <p class="eyebrow">Test what you learned</p>
+
+    <h2>Can you read the signal?</h2>
+
+    <p class="lede">
+      Try this short quiz to test what you learned about atmospheric
+      remote sensing, wavelength selection, noise, and physics-informed
+      machine learning.
+    </p>
+
+    <div class="quiz-container">
+
+      <div class="quiz-question" data-answer="b">
+        <h3>1. Why doesn't a satellite measure a purely surface signal?</h3>
+
+        <label>
+          <input type="radio" name="q1" value="a">
+          Satellites cannot measure reflected sunlight
+        </label>
+
+        <label>
+          <input type="radio" name="q1" value="b">
+          Light interacts with the atmosphere before reaching the sensor
+        </label>
+
+        <label>
+          <input type="radio" name="q1" value="c">
+          Earth's surface absorbs every wavelength
+        </label>
+
+        <label>
+          <input type="radio" name="q1" value="d">
+          Satellite sensors measure only temperature
+        </label>
+      </div>
+
+
+      <div class="quiz-question" data-answer="c">
+        <h3>2. What is special about the O₂ A-band near 760 nm?</h3>
+
+        <label>
+          <input type="radio" name="q2" value="a">
+          It contains no atmospheric absorption
+        </label>
+
+        <label>
+          <input type="radio" name="q2" value="b">
+          It is produced primarily by carbon dioxide
+        </label>
+
+        <label>
+          <input type="radio" name="q2" value="c">
+          Molecular oxygen produces characteristic absorption features there
+        </label>
+
+        <label>
+          <input type="radio" name="q2" value="d">
+          It can only be observed from the ground
+        </label>
+      </div>
+
+
+      <div class="quiz-question" data-answer="a">
+        <h3>3. Why can choosing only a few wavelengths still be useful?</h3>
+
+        <label>
+          <input type="radio" name="q3" value="a">
+          Carefully chosen wavelengths can contain more useful discriminatory information
+        </label>
+
+        <label>
+          <input type="radio" name="q3" value="b">
+          All wavelengths always contain identical information
+        </label>
+
+        <label>
+          <input type="radio" name="q3" value="c">
+          Remote-sensing instruments cannot measure more than five wavelengths
+        </label>
+
+        <label>
+          <input type="radio" name="q3" value="d">
+          Atmospheric absorption disappears when fewer wavelengths are measured
+        </label>
+      </div>
+
+
+      <div class="quiz-question" data-answer="d">
+        <h3>4. Why test a wavelength-selection strategy with simulated noise?</h3>
+
+        <label>
+          <input type="radio" name="q4" value="a">
+          To make every spectrum look identical
+        </label>
+
+        <label>
+          <input type="radio" name="q4" value="b">
+          To remove the atmosphere from the measurement
+        </label>
+
+        <label>
+          <input type="radio" name="q4" value="c">
+          To guarantee perfect classification
+        </label>
+
+        <label>
+          <input type="radio" name="q4" value="d">
+          To test whether the strategy remains informative when measurements are imperfect
+        </label>
+      </div>
+
+
+      <div class="quiz-question" data-answer="b">
+        <h3>5. What distinguishes physics-informed machine learning from a purely data-driven model?</h3>
+
+        <label>
+          <input type="radio" name="q5" value="a">
+          It avoids using measured data
+        </label>
+
+        <label>
+          <input type="radio" name="q5" value="b">
+          It incorporates known physical relationships into the modeling process
+        </label>
+
+        <label>
+          <input type="radio" name="q5" value="c">
+          It does not require computation
+        </label>
+
+        <label>
+          <input type="radio" name="q5" value="d">
+          It can only be used for weather forecasting
+        </label>
+      </div>
+
+
+      <div class="quiz-actions">
+        <button class="btn btn-primary" id="checkQuiz">
+          Check answers
+        </button>
+
+        <button class="btn btn-secondary" id="resetQuiz">
+          Try again
+        </button>
+      </div>
+
+      <div
+        class="quiz-result"
+        id="quizResult"
+        aria-live="polite"
+      ></div>
+
+    </div>
+
+  </div>
+</section>
+
 <!-- ============ SECTION 10 — CAREERS ============ -->
 <section class="section" id="careers">
   <div class="section-inner">
@@ -1125,13 +1287,62 @@
 </div>
 </section>
 
-<!-- ============ SECTION 11 — ABOUT ============ -->
-<section class="section section-alt" id="about">
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
   <div class="section-inner">
-    <p class="eyebrow">Section 9</p>
-    <h2>About this interactive demonstration</h2>
-    <p>This educational tool combines two related perspectives on atmospheric remote sensing. The spectral-band selection demonstration is inspired by optimization concepts explored by Tamta Burduli during research in passive atmospheric sensing, and is presented here using synthetic educational data. The physics-informed machine-learning section communicates separate research conducted at Pacific Northwest National Laboratory (PNNL) and does not reproduce PNNL's research model.</p>
-    <p>Built for the URA STEM Ambassador Challenge to translate DOE National Laboratory-style research into a public, interactive format.</p>
+
+    <p class="eyebrow">About the creator</p>
+
+    <h2>Hi, I'm Tamta.</h2>
+
+    <div class="about-grid">
+
+      <div class="about-text">
+
+        <p class="lede">
+          I'm an undergraduate physics student interested in remote sensing,
+          atmospheric physics, computational methods, and Earth and planetary
+          science.
+        </p>
+
+        <p>
+          I created <strong>Seeing Through the Atmosphere</strong> as a
+          science-communication project for the URA STEM Ambassador Challenge.
+          The goal is to make some of the ideas behind atmospheric remote
+          sensing more approachable: how light interacts with the atmosphere,
+          why wavelength selection matters, how computation can help design
+          measurements, and how physics can guide machine-learning models.
+        </p>
+
+        <p>
+          Parts of this project were inspired by my experience working with
+          passive atmospheric sensing and spectral measurement optimization.
+          All interactive spectral demonstrations on this website use synthetic
+          educational data and do not reproduce unpublished research datasets.
+        </p>
+
+      </div>
+
+      <div class="about-focus">
+
+        <span class="about-label">INTERESTS</span>
+
+        <p>
+          Remote sensing · Atmospheric physics · Spectroscopy ·
+          Computational physics · Earth &amp; planetary science
+        </p>
+
+        <span class="about-label">WHY THIS SITE?</span>
+
+        <p>
+          Because scientific measurements become much more interesting when
+          we understand the physics hidden inside them.
+        </p>
+
+      </div>
+
+    </div>
+
   </div>
 </section>
 
