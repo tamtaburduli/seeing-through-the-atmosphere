@@ -1070,3 +1070,20 @@ summary:focus-visible {
   display: block;
   border-radius: 16px;
 }
+
+/* Atmospheric correction diagram */
+
+.atmospheric-correction-image-wrap {
+  width: 100%;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.atmospheric-correction-image {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  display: block;
+}
