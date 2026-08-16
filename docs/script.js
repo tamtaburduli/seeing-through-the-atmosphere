@@ -544,3 +544,100 @@ const optimizeState = { bands: null, score: null };
     }, 30);
   });
 })();
+/* =========================================================
+   QUIZ
+   ========================================================= */
+
+const checkQuizBtn = document.getElementById('checkQuiz');
+const resetQuizBtn = document.getElementById('resetQuiz');
+const quizResult = document.getElementById('quizResult');
+
+if (checkQuizBtn && resetQuizBtn && quizResult) {
+
+  checkQuizBtn.addEventListener('click', () => {
+
+    const questions = document.querySelectorAll('.quiz-question');
+
+    let score = 0;
+    let answered = 0;
+
+    questions.forEach((question) => {
+
+      const selected = question.querySelector(
+        'input[type="radio"]:checked'
+      );
+
+      question.classList.remove('correct', 'incorrect');
+
+      if (!selected) {
+        return;
+      }
+
+      answered++;
+
+      const correctAnswer = question.dataset.answer;
+
+      if (selected.value === correctAnswer) {
+        score++;
+        question.classList.add('correct');
+      } else {
+        question.classList.add('incorrect');
+      }
+
+    });
+
+
+    quizResult.style.display = 'block';
+
+
+    if (answered < questions.length) {
+
+      quizResult.textContent =
+        `You've answered ${answered} of ${questions.length} questions. Complete all five to see your final score.`;
+
+      return;
+    }
+
+
+    if (score === 5) {
+
+      quizResult.textContent =
+        '5/5 — Excellent. You’re thinking like a remote-sensing scientist.';
+
+    } else if (score >= 3) {
+
+      quizResult.textContent =
+        `${score}/5 — Nice work. You’ve got the main ideas. Review the sections you missed and try again.`;
+
+    } else {
+
+      quizResult.textContent =
+        `${score}/5 — Keep exploring the signal. Revisit the atmosphere, wavelengths, and physics-informed ML sections and try again.`;
+
+    }
+
+  });
+
+
+  resetQuizBtn.addEventListener('click', () => {
+
+    document
+      .querySelectorAll('.quiz-question')
+      .forEach((question) => {
+
+        question.classList.remove('correct', 'incorrect');
+
+        question
+          .querySelectorAll('input[type="radio"]')
+          .forEach((input) => {
+            input.checked = false;
+          });
+
+      });
+
+    quizResult.style.display = 'none';
+    quizResult.textContent = '';
+
+  });
+
+}
