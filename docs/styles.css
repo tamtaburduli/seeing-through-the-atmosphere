@@ -454,10 +454,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
     align-items: center;
     padding: 0 24px;
     box-sizing: border-box;
-    background: #040A1B;
 }
-
-.remote-sensing-image {
+e-sensing-image {
   width: 750px;
   max-width: 90vw;
   height: auto;
